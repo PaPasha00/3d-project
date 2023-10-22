@@ -4,7 +4,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import { MyLoader } from "./MyLoader";
 
 const Avatar = () => {
-    const [index, setIndex] = useState(1);
+    const [index, setIndex] = useState(2);
     const [isClicked, setIsClicked] = useState(false);
     const avatar = useGLTF('/animation8.glb');
     const { actions, names } = useAnimations(avatar.animations, avatar.scene);

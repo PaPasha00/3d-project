@@ -35,7 +35,7 @@ const CASES: TCases[] = [
         pos: 5,
     },
     {
-        name: 'Cherry fitness',
+        name: 'Cherry fitness ',
         link: 'https://web-site-for-fitness-club.vercel.app/',
         img: './cases/cher.jpg',
         pos: 6,

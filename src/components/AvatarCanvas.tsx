@@ -6,6 +6,7 @@ import { MyLoader } from "./MyLoader";
 const Avatar = () => {
     const [index, setIndex] = useState(2);
     const [isClicked, setIsClicked] = useState(false);
+    const [position, setPosition] = useState(0);
     const avatar = useGLTF('/animation8.glb');
     const { actions, names } = useAnimations(avatar.animations, avatar.scene);
 
@@ -28,14 +29,18 @@ const Avatar = () => {
                         rotation-y={-0.5}
                         position-x={0.4}
                     />
-                    <Html position={[-3.7, 0.2, 0]}>
+                    <Html className="relative z-[10]" position={[-3.7, 0.2, 0]}>
                         <button onClick={() => {
                             setIndex((index + 1) % names.length)
                             setIsClicked(!isClicked)
+                            setPosition((position + 1) % names.length)
                         }}
-                            className="bg-theme text-black w-[100px] p-2 rounded-lg text-xs sm:text-lg sm:w-[200px] hover:bg-white hover:scale-105 duration-500 transition-all"
+                            className="bg-theme text-black font-bold z-[20] w-[100px] p-2 rounded-lg text-xs sm:text-lg sm:w-[200px] hover:bg-white hover:scale-105 duration-500 transition-all"
                         >
-                            {isClicked ? 'Зацени движения' : 'Смотри ещё'}
+                            Зацени движения
+                            <p className="text-[#626262] text-[10px]">
+                                {`${position + 1}/4`}
+                            </p>
                         </button>
                     </Html>
                 </group>
@@ -52,10 +57,14 @@ const Avatar = () => {
                         <button onClick={() => {
                             setIndex((index + 1) % names.length)
                             setIsClicked(!isClicked)
+                            setPosition((position + 1) % names.length)
                         }}
-                            className="bg-theme text-black w-[100px] p-2 rounded-lg text-xs sm:text-lg sm:w-[200px] hover:bg-white hover:scale-105 duration-500 transition-all"
+                            className="bg-theme text-black w-[100px] z-[20] font-bold p-2 rounded-lg text-xs sm:text-lg sm:w-[200px] hover:bg-white hover:scale-105 duration-500 transition-all"
                         >
-                            {isClicked ? 'Зацени движения' : 'Смотри ещё'}
+                            Зацени движения
+                            <p className="text-[#626262] text-[10px]">
+                                {`${position + 1}/4`}
+                            </p>
                         </button>
                     </Html>
                 </group>

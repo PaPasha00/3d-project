@@ -9,7 +9,7 @@ export default {
       colors: {
         theme: '#32f6f7',
         'theme-second': '#fa02fc',
-      }
+      },
     },
   },
   plugins: [],

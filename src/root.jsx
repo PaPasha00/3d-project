@@ -1,12 +1,13 @@
 import { Canvas } from "@react-three/fiber"
 import { Hero } from "./components/Hero"
+import { Header } from "./assets/cards/standart/Header"
 
-function App() {
+export default function Root() {
   return (
     <div className="h-screen">
+      <Header />
       <Hero />
     </div>
   )
 }
 
-export default App

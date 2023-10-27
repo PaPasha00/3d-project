@@ -17,29 +17,36 @@ const CASES: TCases[] = [
         pos: 2,
     },
     {
+        name: 'Todo app',
+        link: 'https://todo-app-three-sage-44.vercel.app/',
+        img: './cases/dnd.jpg',
+        pos: 3,
+    },
+    {
         name: 'Поиск книг',
         link: 'https://book-searching-rose.vercel.app/',
         img: './cases/books.jpg',
-        pos: 3,
+        pos: 4,
     },
     {
         name: 'Flappy bird',
         link: 'https://flappy-bird-taupe.vercel.app/',
         img: './cases/bird.jpg',
-        pos: 4,
+        pos: 5,
     },
     {
         name: 'Генератор паролей',
         link: 'https://password-generator-eosin-eta.vercel.app/',
         img: './cases/pass.jpg',
-        pos: 5,
+        pos: 6,
     },
     {
         name: 'Cherry fitness ',
         link: 'https://web-site-for-fitness-club.vercel.app/',
         img: './cases/cher.jpg',
-        pos: 6,
+        pos: 7,
     },
+    
 ];
 
 export type TCases = {
@@ -68,7 +75,7 @@ export const Cases = () => {
         <>
             <Header />
             <motion.section
-                className="w-full bg-fixed min-h-screen flex flex-col bg-[url('/casesback.jpg')] bg-center bg-no-repeat bg-cover justify-start p-5 items-center">
+                className="w-full bg-fixed min-h-screen fixedPosition flex flex-col bg-[url('/casesback.jpg')] bg-center bg-no-repeat bg-cover justify-start p-5 items-center">
                 <motion.h1 variants={animateVariants}
                     initial='hidden'
                     animate='visible'

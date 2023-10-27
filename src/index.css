@@ -5,3 +5,9 @@
 body {
     background: #171717;
 }
+
+.fixedPosition {
+    -webkit-background-size: fixed;
+    -moz-background-size: fixed;
+    -o-background-size: fixed;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import { AvatarCanvas } from "./AvatarCanvas";
+import { Cases } from "./Cases";
 
 export const Hero = () => {
     return (
@@ -15,7 +16,6 @@ export const Hero = () => {
             <div className="relative z-10 h-screen w-screen">
                 <AvatarCanvas />
             </div>
-
         </section>
     )
 };

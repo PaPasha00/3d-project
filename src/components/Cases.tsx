@@ -69,7 +69,7 @@ const animateVariants = {
         }
     }
 }
-
+// background: -webkit-linear-gradient(90deg,#00b0b9,#0086b2,#834980,#e6b416); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(90deg,#00b0b9,#0086b2,#834980,#e6b416); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 export const Cases = () => {
     return (
         <>

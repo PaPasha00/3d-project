@@ -76,7 +76,7 @@ export const Cases = () => {
             <Header />
             <motion.section
                 className="w-full bg-fixed min-h-screen fixedPosition flex flex-col bg-[url('/casesback.jpg')] bg-center bg-no-repeat bg-cover justify-start p-5 items-center">
-                <motion.h1 variants={animateVariants}
+                {/* <motion.h1 variants={animateVariants}
                     initial='hidden'
                     animate='visible'
                     className="text-theme font-extrabold text-[25px] md:text-3xl"
@@ -89,7 +89,7 @@ export const Cases = () => {
                             <CardCases key={cardObj.name + index} {...cardObj} />
                         ))
                     }
-                </div>
+                </div> */}
             </motion.section>
         </>
     )

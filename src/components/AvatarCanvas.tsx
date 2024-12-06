@@ -7,7 +7,7 @@ const Avatar = () => {
     const [index, setIndex] = useState(1);
     const [isClicked, setIsClicked] = useState(false);
     const [position, setPosition] = useState(0);
-    const avatar = useGLTF('/animation8.glb');
+    const avatar = useGLTF('/VasKis7.glb');
     const { actions, names } = useAnimations(avatar.animations, avatar.scene);
 
     useEffect(() => {
@@ -54,7 +54,7 @@ const Avatar = () => {
                 ? <group>
                     <primitive
                         object={avatar.scene}
-                        scale={0.35}
+                        scale={0.45}
                         position-y={-2}
                         rotation-y={-10}
                         position-x={0}

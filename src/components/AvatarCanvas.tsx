@@ -3,7 +3,7 @@ import { Canvas } from "@react-three/fiber";
 import React, { Suspense, useEffect, useState } from "react";
 import { MyLoader } from "./MyLoader";
 
-const Avatar = () => {
+const Avatar = ({buttonOnModel, rotation}) => {
     const [index, setIndex] = useState(1);
     const [isClicked, setIsClicked] = useState(false);
     const [position, setPosition] = useState(0);
@@ -60,7 +60,7 @@ const Avatar = () => {
                         position-x={0}
                         rotation-x={0.1}
                     />
-                    <Html className="relative z-[10]" position={[3.7, 0.2, 0]}>
+                    {buttonOnModel && <Html className="relative z-[10]" position={[3.7, 0.2, 0]}>
                         <button onClick={() => {
                             setIndex((index + 1) % names.length)
                             setIsClicked(!isClicked)
@@ -73,6 +73,7 @@ const Avatar = () => {
                             }
                         </button>
                     </Html>
+}
                 </group>
                 :
                 <group>
@@ -84,7 +85,7 @@ const Avatar = () => {
                         position-x={0}
                         rotation-x={0.1}
                     />
-                    <Html position={[0.5, -0.5, 0]}>
+                    {buttonOnModel && <Html position={[0.5, -0.5, 0]}>
                         <button onClick={() => {
                             setIndex((index + 1) % names.length)
                             setIsClicked(!isClicked)
@@ -97,19 +98,20 @@ const Avatar = () => {
                             }
                         </button>
                     </Html>
+}
                 </group>
         }</>
     )
 }
 
-export const AvatarCanvas = () => {
+export const AvatarCanvas = ({buttonOnModel, rotation}) => {
     return (
         <Canvas>
             <ambientLight intensity={0.5} />
             <pointLight position={[1, 1, 1]} />
-            <OrbitControls enabled={false} />
+            <OrbitControls autoRotateSpeed={0.5} autoRotate={rotation} maxDistance={12} minDistance={4} enabled={true} />
             <Suspense fallback={<MyLoader />}>
-                <Avatar />
+                <Avatar  buttonOnModel={buttonOnModel} rotation={rotation} />
             </Suspense>
             <Preload all />
         </Canvas>

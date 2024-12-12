@@ -69,14 +69,14 @@ const animateVariants = {
         }
     }
 }
-
+// background: -webkit-linear-gradient(90deg,#00b0b9,#0086b2,#834980,#e6b416); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(90deg,#00b0b9,#0086b2,#834980,#e6b416); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 export const Cases = () => {
     return (
         <>
             <Header />
             <motion.section
                 className="w-full bg-fixed min-h-screen fixedPosition flex flex-col bg-[url('/casesback.jpg')] bg-center bg-no-repeat bg-cover justify-start p-5 items-center">
-                <motion.h1 variants={animateVariants}
+                {/* <motion.h1 variants={animateVariants}
                     initial='hidden'
                     animate='visible'
                     className="text-theme font-extrabold text-[25px] md:text-3xl"
@@ -89,7 +89,7 @@ export const Cases = () => {
                             <CardCases key={cardObj.name + index} {...cardObj} />
                         ))
                     }
-                </div>
+                </div> */}
             </motion.section>
         </>
     )

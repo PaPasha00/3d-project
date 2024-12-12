@@ -20,20 +20,20 @@ type TLinks = {
 
 const headerVariants = {
     hidden: {
-        x: '-100vw',
+        x: '+100vw',
     },
     visible: {
-        x: '0vw',
+        x: '50vw',
         transition: {
             duration: 1,
         }
     },
 }
-
+// background: -webkit-linear-gradient(90deg,#291d53,#4d1740,#5a1e2d); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(90deg,#291d53,#4d1740,#5a1e2d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 export const SideMenu = () => {
     return (
         <motion.div
-            className="w-full bg-[url('/menuBack2.png')] bg-center bg-no-repeat bg-cover h-screen px-5 pt-[90px] flex flex-col justify-between fixed z-[998] bg-black"
+            className="w-[50%] bg-[linear-gradient(90deg,#291d53,#4d1740,#5a1e2d)] bg-center bg-no-repeat bg-cover h-screen px-5 pt-[90px] flex flex-col justify-between fixed z-[998] bg-black"
             variants={headerVariants}
             initial='hidden'
             animate='visible'>
